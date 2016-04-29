@@ -14,6 +14,41 @@ from directive:</br>
 </br>
 </br>
 <p>and scope:</p>
-<and-dire greet="sayHello(aa)"></and-dire>
+<and-dire greet="sayHello(aa)"></and-dire></br>
+
+</br>
+</br>
+</br>
+<load-data howToLoad="loadData()">滑动加载数据</load-data>
+
+<div ng-controller="AnotherController">
+	<load-data howToLoad="loadData2()">滑动加载数据2</load-data>
+</div>
+
+</br>
+</br>
+</br>
+<p>超人能力大比拼</p>
+<superman speed>超人A</superman></br>
+<superman speed strength>超人B</superman></br>
+<superman speed strength light>超人C</superman></br>
+</br>
+</br>
+</br>
+<p>Expander</p>
+<div>
+	<easy-expander expander-title='title'>
+		<p>{{text}}</p>
+	</easy-expander>
+</div>
+</br>
+</br>
+</br>
+
+<my-accordion>
+	<expander ng-repeat='expander in expanders' expander-title='expander.title'>
+		{{expander.text}}
+	</expander>
+</my-accordion>
 
 </div>
