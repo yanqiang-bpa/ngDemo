@@ -20,6 +20,15 @@
         templateUrl: 'app/formDemo/FormCustom.html',
         controller: 'FormCustomController',
       })
+      .when('/instance/:inst',{
+        templateUrl: 'app/instances/instance.template.html',
+        controller: 'InstanceController',
+        // resolve: {
+        //         columnDefs: function($http){
+        //             return $http.get("data/DNA.json");
+        //         }
+        //     }
+      })
       .otherwise({
         redirectTo: '/'
       });

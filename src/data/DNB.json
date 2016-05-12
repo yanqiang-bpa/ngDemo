@@ -1,0 +1,30 @@
+[
+  { "displayName": "Location",
+    "name": "location", 
+    "width": 100
+  },
+  { "displayName": "Date",
+    "name": "date", 
+    "width": 100
+  },
+  { "displayName": "Sequencer",
+    "name": "sequencer", 
+    "width": 100
+  },
+  { "displayName": "Image Usage",
+    "name": "imageUsage", 
+    "width": 120
+  },
+  { "displayName": "Cycle Total Num",
+    "name": "cycleTotalNum", 
+    "width": 150
+  },
+  { "displayName": "Row Total Num",
+    "name": "rowTotalNum", 
+    "width": 150
+  },
+  { "displayName": "Column Total Num",
+    "name": "columnTotalNum", 
+    "width": 150
+  }
+]
