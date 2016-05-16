@@ -3,35 +3,33 @@
 
   angular
     .module('myNewProject')
-    .config(routeConfig);
+    .config(
+      function($stateProvider, $urlRouterProvider) {
+        $stateProvider
+          .state('home', {
+            url: '/',
+            templateUrl: 'app/main/main.html',
+            controller: 'MainController',
+            controllerAs: 'main'
+          })
+          .state('bindScope',{
+            url: '/scope',
+            templateUrl: 'app/directiveDemo/bindScope.html',
+            controller: 'BindScopeController',
+          })
+          .state('customForm',{
+            url: '/form',
+            templateUrl: 'app/formDemo/FormCustom.html',
+            controller: 'FormCustomController',
+          })
+          .state('instance',{
+            url: '/instance?type',
+            templateUrl: 'app/instances/instance.template.html',
+            controller: 'InstanceController',
+          });
+      }
+    );
 
-  function routeConfig($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'app/main/main.html',
-        controller: 'MainController',
-        controllerAs: 'main'
-      })
-      .when('/bindScope',{
-        templateUrl: 'app/directiveDemo/bindScope.html',
-        controller: 'BindScopeController',
-      })
-      .when('/customForm',{
-        templateUrl: 'app/formDemo/FormCustom.html',
-        controller: 'FormCustomController',
-      })
-      .when('/instance/:inst',{
-        templateUrl: 'app/instances/instance.template.html',
-        controller: 'InstanceController',
-        // resolve: {
-        //         columnDefs: function($http){
-        //             return $http.get("data/DNA.json");
-        //         }
-        //     }
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  }
+  
 
 })();

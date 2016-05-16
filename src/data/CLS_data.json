@@ -1,0 +1,20 @@
+[
+	{
+		"slideName": "CLS_A",
+		"lane": "lane123",
+		"reportTitle": "reportABC",
+		"reportTime": "2016-05-12",
+		"sequencer": "seq910",
+		">Q30%": "0.6",
+		"BaseNum": "33"
+	},
+	{
+		"slideName": "CLS_B",
+		"lane": "lane123",
+		"reportTitle": "reportABC",
+		"reportTime": "2016-05-12",
+		"sequencer": "seq910",
+		">Q30%": "0.6",
+		"BaseNum": "33"
+	}
+]

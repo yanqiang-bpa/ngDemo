@@ -6,9 +6,8 @@
     .controller('InstanceController', InstanceController);
 
   /** @ngInject */
-  function InstanceController($scope, $timeout, $routeParams, $http) {
-    console.log($routeParams.inst)
-    $scope.instance_type = $routeParams.inst;
+  function InstanceController($scope, $timeout, $stateParams, $http) {
+    $scope.instance_type = $stateParams.type;
 
     $scope.instGrid = {
         enableSorting: true,
@@ -30,12 +29,12 @@
       console.log($scope.instGrid.data)
     })
 
-    $scope.instGrid.columnDefs = $scope.columns;
-    console.log($scope.instGrid.columnDefs)
+
 
     $http.get("data/" + $scope.instance_type + ".json")
     .success(function(data){
       $scope.columns = data;
+      $scope.instGrid.columnDefs = $scope.columns;
       console.log($scope.columns)
     })
   }

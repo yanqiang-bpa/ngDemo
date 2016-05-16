@@ -1,4 +1,4 @@
-<nav class="navbar navbar-static-top navbar-inverse">
+<nav class="navbar navbar-default" ng-controller="NavbarController">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="https://github.com/Swiip/generator-gulp-angular">
@@ -7,13 +7,10 @@
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
-      <ul class="nav navbar-nav">
-        <li class="active"><a ng-href="#">Home</a></li>
-        <li><a ng-href="#">About</a></li>
-        <li><a ng-href="#">Contact</a></li>
-        <li><a ng-href="#/instance/DNA">DNA</a></li>
-        <li><a ng-href="#/instance/DNB">DNB</a></li>
-      </ul>
+      
+      <span ng-repeat="type in types">
+        <li><a ui-sref="instance({type: type})">{{type}}</a></li>
+      </span>
 
       <ul class="nav navbar-nav navbar-right acme-navbar-text">
         <li>Application was created {{ vm.relativeDate }}.</li>
