@@ -26,6 +26,11 @@
             url: '/instance?type',
             templateUrl: 'app/instances/instance.template.html',
             controller: 'InstanceController',
+          })
+          .state('counter',{
+            url: '/counter',
+            templateUrl: 'app/scope/howToBind.html',
+            controller: 'CounterCtrl',
           });
       }
     );
